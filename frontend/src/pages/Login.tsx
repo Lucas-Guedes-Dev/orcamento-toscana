@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { EyeOff, Eye } from 'react-feather';
 import { postData } from '../serivce/api';
-import { useStore } from '../store/LoginStore';
 import { useNavigate } from 'react-router-dom'; // Importe useHistory
 
 import { 
@@ -19,14 +18,13 @@ import {
 
 export default function Login(){
     const [ eyeOn, setEyeOn ] = useState(false);
-    let { logado, saveLogado } = useStore(); 
+
     const navigate = useNavigate();
     
     const SendLogin = async () => {
         try{
             const response = await postData('/login', {username: 'teste', senha: 'teste'});
-            await saveLogado(response.login);
-            logado = response.login;
+            localStorage.setItem('logado', response.login);
             navigate('/home');
         }catch (error){
             console.log(error)

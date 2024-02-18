@@ -1,11 +1,13 @@
 
 import { useState } from 'react';
-import { useStore } from '../store/LoginStore';
-import { HomeContainer } from '../styles/HomeStyle';
+import { PageContainer, MainContainer } from '../styles/DeafaultStyles';
+import Sidebar from '../components/SideBar';
 export default function Home(){
-    const { logado } = useStore(); 
 
     return(
-        <HomeContainer>ola</HomeContainer>
+        <PageContainer>
+            <Sidebar></Sidebar>
+            <MainContainer></MainContainer>
+        </PageContainer>
     );
 }
