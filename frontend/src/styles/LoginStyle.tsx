@@ -49,14 +49,22 @@ export const FooterContainerLogin = styled.div`
     padding: 2%;
 `;
 
-export const InputLogin = styled.input`
-    background-color: transparent;
+export const ContainerInputLogin = styled.div`  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 2px solid rgb(80, 80, 80);
     width: 80%;
     height: 20%;
-    border: 0px;
-    border-bottom: 2px solid rgb(80, 80, 80);
-    color: rgb(80, 80, 80);
+`;
 
+
+export const InputLogin = styled.input`
+    background-color: transparent;
+    border: 0px;
+    color: rgb(80, 80, 80);
+    width: 100%;
     :focus{
         outline: none;
     }
@@ -70,4 +78,9 @@ export const TitleLogin = styled.h2`
 export const ButtonLogin = styled.button`
     background-color: rgb(116, 4, 228);
     color: white;
+`;
+
+export const ButtonEye = styled.button`
+    background-color: transparent;
+    padding: 0;
 `;

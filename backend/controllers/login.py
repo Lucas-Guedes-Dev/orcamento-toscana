@@ -1,9 +1,8 @@
-from flask import jsonify
+from flask import jsonify, request
 from flask.views import View
 
 class Login(View):
-    methods = ['GET']
-
-    def get(self):
-        return jsonify(login=True)
-
+    methods = ['POST']
+    def dispatch_request(self):
+        if request.method == "POST":
+            return jsonify({'login': True}), 200
