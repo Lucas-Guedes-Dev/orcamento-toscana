@@ -1,22 +1,34 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import { SidebarProps } from "../types/TypesStyles";
 
 export const SidebarContainer = styled.div<SidebarProps>`
     display: flex;
-    width: 320px;
+    position: relative;
+    width: ${({ close }) => (close ? '110px' : '360px')}; 
+    min-width: 80px; 
     height: 100%;
     background-color: #000236;
     flex-direction: column;
     color: white;
-    box-shadow: 10px 0px 15px -1px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 0px 15px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 0px 15px -1px rgba(0,0,0,0.75);
-    transition: transform 0.3s ease;
-    
-    ${({ close }) => close && css`
-        transform: translateX(-65%);
-        
-    `}
+    box-shadow: 10px 0px 15px -1px rgba(0, 0, 0, 0.75);
+    transition: width 0.3s ease; 
+    z-index: 1;
+
+    ::before {
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000236;
+        opacity: ${({ close }) => (close ? 0 : 1)}; 
+        pointer-events: ${({ close }) => (close ? 'none' : 'auto')};
+        transition: opacity 0.3s ease;
+    }
+
+    @media (max-width: 270px) {
+        width: 100%;
+    }
 `;
 
 export const HeaderSidebar = styled.div`
@@ -24,13 +36,20 @@ export const HeaderSidebar = styled.div`
     flex: 1;
     justify-content: center;
     align-items: center;
+    background-color: #101258;
+    
 `;
 
-export const LogoContainer = styled.div`
-    display: flex;
-    flex: 3;
+export const LogoContainer = styled.div<SidebarProps>`
+    display: ${(close)=>(close? 'flex':'none')};
+    flex: ${(close)=>(close? 3:0)};
     justify-content: center;
     align-items: center;
+    min-height: 80px;
+
+    @media (max-width: 270px) {
+        display: none;
+    }
 `;
 
 export const ChevronContainer = styled.button`
@@ -44,8 +63,12 @@ export const ChevronContainer = styled.button`
 export const BodySidebar = styled.div`
     display: flex;
     flex: 8;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    overflow: auto;
+    flex-direction: column;
+    padding: 2%;
+    gap: 1%;
 `;
 
 export const FooterSidebar = styled.div`
@@ -55,4 +78,33 @@ export const FooterSidebar = styled.div`
     align-items: center;
 `;
 
+export const TitleSideBar = styled.h2`
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 'bold';
+`;
 
+export const ButtonSideBar = styled.button`
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 0px;
+`;
+
+export const TextButtonSidebar = styled.label`
+    font-size: 20px;
+    display: flex;
+    flex: 3;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media (max-width: 270px) {
+        display: none;
+    }
+`
+    

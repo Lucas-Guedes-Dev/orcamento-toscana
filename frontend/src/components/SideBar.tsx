@@ -1,22 +1,41 @@
 import { useState } from 'react';
-import { ChevronsLeft, ChevronRight } from 'react-feather';
+import { ChevronsLeft, ChevronRight, DollarSign, Home } from 'react-feather';
 import { 
     ChevronContainer,
     BodySidebar,
     FooterSidebar, 
     HeaderSidebar, 
     LogoContainer, 
-    SidebarContainer
+    SidebarContainer,
+    TitleSideBar,
+    ButtonSideBar,
+    TextButtonSidebar
 } from '../styles/SideBarStyle';
+import { useNavigate } from 'react-router-dom'; 
 
-export default function Sidebar(){
-    const [close, setClose] = useState(false);
-    
+interface SidebarProps{
+    page: string;
+    close: boolean;
+}
+
+const styleIcons = {
+    display: 'flex',
+    flex: 1
+}
+
+export default function Sidebar(props: SidebarProps){
+    const [close, setClose] = useState(props.close);
+    const navigate = useNavigate();
+
     return(
         <SidebarContainer close={close}>
             <HeaderSidebar>
-                <LogoContainer>
-                    
+                <LogoContainer style={{display: close? 'none' : 'flex' }} close={close}>
+                    {close? 
+                        ('')
+                        :
+                        (<TitleSideBar>Toscana</TitleSideBar>)
+                    }
                 </LogoContainer>
                 <ChevronContainer onClick={()=>{setClose(!close)}}>
                     { close ? 
@@ -26,7 +45,34 @@ export default function Sidebar(){
                     }
                 </ChevronContainer>
             </HeaderSidebar>
-            <BodySidebar></BodySidebar>
+            <BodySidebar>
+                <ButtonSideBar 
+                    style={{backgroundColor: props.page == 'home'? 'rgba(255, 255, 255, 0.256)' : 'transparent'}}
+                    onClick={()=>navigate('/home', { state: { close: close} })}
+                >
+                    <Home style={styleIcons} size={30}/>
+                    {
+                        close ? (
+                            ''
+                        ):(
+                            <TextButtonSidebar>Home</TextButtonSidebar>
+                        )
+                    }
+                </ButtonSideBar>
+                <ButtonSideBar 
+                    style={{backgroundColor: props.page == 'orcamentos'? 'rgba(255, 255, 255, 0.256)' : 'transparent'}}
+                    onClick={()=>navigate('/orcamentos', { state: { close: close} })}
+                >
+                    <DollarSign style={styleIcons} size={30}/>
+                    {
+                        close ? (
+                            ''
+                        ):(
+                            <TextButtonSidebar>Orçamentos</TextButtonSidebar>
+                        )
+                    }
+                </ButtonSideBar>
+            </BodySidebar>
             <FooterSidebar></FooterSidebar>
         </SidebarContainer>
     );

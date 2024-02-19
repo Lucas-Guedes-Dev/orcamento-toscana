@@ -27,7 +27,7 @@ export default function Login(){
             localStorage.setItem('logado', response.login);
             navigate('/home');
         }catch (error){
-            console.log(error)
+            // console.log(error)
         }
     }
 
