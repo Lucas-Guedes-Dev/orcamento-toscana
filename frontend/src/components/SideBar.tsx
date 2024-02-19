@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronsLeft, ChevronRight, DollarSign, Home } from 'react-feather';
+import { ChevronsLeft, ChevronsRight, ChevronsDown, DollarSign, Home, PlusCircle} from 'react-feather';
 import { 
     ChevronContainer,
     BodySidebar,
@@ -25,6 +25,8 @@ const styleIcons = {
 
 export default function Sidebar(props: SidebarProps){
     const [close, setClose] = useState(props.close);
+    const [openRegister, setOpenRegister] = useState(false);
+
     const navigate = useNavigate();
 
     return(
@@ -39,7 +41,7 @@ export default function Sidebar(props: SidebarProps){
                 </LogoContainer>
                 <ChevronContainer onClick={()=>{setClose(!close)}}>
                     { close ? 
-                        (<ChevronRight size={30}/>)
+                        (<ChevronsRight size={30}/>)
                         :
                         (<ChevronsLeft size={30}/>)
                     }
@@ -71,6 +73,20 @@ export default function Sidebar(props: SidebarProps){
                             <TextButtonSidebar>Orçamentos</TextButtonSidebar>
                         )
                     }
+                </ButtonSideBar>
+                <ButtonSideBar 
+                    style={{backgroundColor: props.page == 'register'? 'rgba(255, 255, 255, 0.256)' : 'transparent'}}
+                    onClick={()=>navigate('/register', { state: { close: close} })}
+                >
+                    <PlusCircle style={styleIcons} size={30}/>
+                    {
+                        close ? (
+                            ''
+                        ):(
+                            <TextButtonSidebar>Cadastros</TextButtonSidebar>
+                        )
+                    }
+
                 </ButtonSideBar>
             </BodySidebar>
             <FooterSidebar></FooterSidebar>

@@ -8,6 +8,7 @@ import RegisterEmploye from '../pages/RegisterEmploye';
 import RegisterMenu from '../pages/RegisterMenu';
 import RegisterEvents from '../pages/RegisterEvents';
 import RegisterDrinks from '../pages/RegisterDrinks';
+import Register from '../pages/Register';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           <Route path='/register-menu' element={<RegisterMenu/>}/>
           <Route path='/register-events' element={<RegisterEvents/>}/>
           <Route path='/register-drinks' element={<RegisterDrinks/>}/>
+          <Route path='/register' element={<Register/>}/>
         </Route>
       </Routes>
     </Router>
