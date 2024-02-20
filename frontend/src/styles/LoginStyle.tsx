@@ -6,7 +6,7 @@ export const ContainerLogin = styled.div`
     align-items: center;
     width: 60vh;
     height: 60vh;
-    aspect-ratio: 1; /* Utiliza a propriedade aspect-ratio para manter a proporção */
+    aspect-ratio: 1; 
     border-radius: 8px;
     flex-direction: column;
     background-color: white;
@@ -76,7 +76,7 @@ export const TitleLogin = styled.h2`
 `;
 
 export const ButtonLogin = styled.button`
-    background-color: rgb(116, 4, 228);
+    background-color: #BF0811;
     color: white;
 `;
 

@@ -12,6 +12,7 @@ import {
     TextButtonSidebar
 } from '../styles/SideBarStyle';
 import { useNavigate } from 'react-router-dom'; 
+import LogoToscana from './Icons/LogoToscana';
 
 interface SidebarProps{
     page: string;
@@ -25,7 +26,7 @@ const styleIcons = {
 
 export default function Sidebar(props: SidebarProps){
     const [close, setClose] = useState(props.close);
-    const [openRegister, setOpenRegister] = useState(false);
+    // const [openRegister, setOpenRegister] = useState(false);
 
     const navigate = useNavigate();
 
@@ -36,14 +37,14 @@ export default function Sidebar(props: SidebarProps){
                     {close? 
                         ('')
                         :
-                        (<TitleSideBar>Toscana</TitleSideBar>)
+                        (<LogoToscana width={150}/>)
                     }
                 </LogoContainer>
                 <ChevronContainer onClick={()=>{setClose(!close)}}>
                     { close ? 
-                        (<ChevronsRight size={30}/>)
+                        (<ChevronsRight size={30} color='white'/>)
                         :
-                        (<ChevronsLeft size={30}/>)
+                        (<ChevronsLeft size={30} color='white'/>)
                     }
                 </ChevronContainer>
             </HeaderSidebar>

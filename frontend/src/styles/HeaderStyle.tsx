@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #d6d6d6;
+    background-color: #3D3D3D;
     flex-direction: row;
     box-shadow: 0px 15px 25px -35px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 15px 25px -35px rgba(0,0,0,0.75);

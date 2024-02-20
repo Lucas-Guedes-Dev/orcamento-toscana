@@ -4,10 +4,10 @@ import { SidebarProps } from "../types/TypesStyles";
 export const SidebarContainer = styled.div<SidebarProps>`
     display: flex;
     position: relative;
-    width: ${({ close }) => (close ? '110px' : '360px')}; 
-    min-width: 80px; 
+    width: ${({ close }) => (close ? '80px' : '360px')}; 
+    min-width: 60px; 
     height: 100%;
-    background-color: #000236;
+    background-color: #901717;
     flex-direction: column;
     color: white;
     box-shadow: 10px 0px 15px -1px rgba(0, 0, 0, 0.75);
@@ -20,7 +20,7 @@ export const SidebarContainer = styled.div<SidebarProps>`
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #000236;
+        background-color: #901717;
         opacity: ${({ close }) => (close ? 0 : 1)}; 
         pointer-events: ${({ close }) => (close ? 'none' : 'auto')};
         transition: opacity 0.3s ease;
@@ -36,7 +36,7 @@ export const HeaderSidebar = styled.div`
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-color: #101258;
+    background-color: #BF0811;
     
 `;
 

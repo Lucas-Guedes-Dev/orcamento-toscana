@@ -5,10 +5,11 @@ import { useLocation } from 'react-router-dom';
 
 export default function RegisterMenu(){
     const { state } = useLocation();
-
-    return(
+    const isSidebarClosed = state ? state.close : false;
+    
+    return( 
         <PageContainer>
-            <Sidebar close={state.close} page='register-menu'/>
+            <Sidebar close={isSidebarClosed} page='register-menu'/>
             <MainContainer>
                 <Header/>
                 <BodyContainer>

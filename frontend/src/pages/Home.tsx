@@ -5,10 +5,10 @@ import { useLocation } from 'react-router-dom';
 
 export default function Home(){
     const { state } = useLocation();
-
-    return(
+    const isSidebarClosed = state ? state.close : false;
+    return( 
         <PageContainer>
-            <Sidebar close={state.close} page='home'/>
+            <Sidebar close={isSidebarClosed} page='home'/>
             <MainContainer>
                 <Header/>
                 <BodyContainer>

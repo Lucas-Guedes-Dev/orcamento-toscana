@@ -5,10 +5,10 @@ import { useLocation } from 'react-router-dom';
 
 export default function Register(){
     const { state } = useLocation();
-
-    return(
+    const isSidebarClosed = state ? state.close : false;
+    return( 
         <PageContainer>
-            <Sidebar close={state.close} page='register'/>
+            <Sidebar close={isSidebarClosed} page='register'/>
             <MainContainer>
                 <Header/>
                 <BodyContainer>
