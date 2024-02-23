@@ -41,6 +41,7 @@ export const BodyContainer = styled.div`
     flex: 8;
     justify-content: center;
     align-items: center;
+    background-color: rgb(245, 245, 245);
 `;
 
 export const FooterContainer = styled.div`

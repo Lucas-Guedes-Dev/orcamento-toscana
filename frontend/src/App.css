@@ -52,3 +52,20 @@ body{
 .read-the-docs {
   color: #888;
 }
+
+.react-datepicker__input-container input{
+  padding-inline: 7%;
+  padding-block: 5%;
+  display: flex;
+  flex: 1;
+  color: #3D3D3D;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #757474;
+  border-radius: 8px;
+}
+.react-datepicker__day {
+  display: flex;
+  font-size: 14px;
+  color: #3D3D3D;
+}

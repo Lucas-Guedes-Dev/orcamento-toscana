@@ -15,6 +15,7 @@ import {
     InputLogin, 
     TitleLogin 
 } from "../styles/LoginStyle";
+import LogoToscana from '../components/Icons/LogoToscana';
 
 export default function Login(){
     const [ eyeOn, setEyeOn ] = useState(false);
@@ -34,7 +35,7 @@ export default function Login(){
     return(
         <ContainerLogin>
             <HeaderContainerLogin>
-                <TitleLogin>Login</TitleLogin>
+                <LogoToscana width={150}/>
             </HeaderContainerLogin>
             <BodyContainerLogin>
                 <ContainerInputLogin>

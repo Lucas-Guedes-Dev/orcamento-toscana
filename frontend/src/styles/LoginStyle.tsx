@@ -10,7 +10,9 @@ export const ContainerLogin = styled.div`
     border-radius: 8px;
     flex-direction: column;
     background-color: white;
-
+    box-shadow: 2px 5px 39px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 5px 39px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 5px 39px 0px rgba(0,0,0,0.75);
     @media (max-width: 768px) {
         width: 50vh;
         height: 55vh;
@@ -25,9 +27,15 @@ export const ContainerLogin = styled.div`
 export const HeaderContainerLogin = styled.div`
     display: flex;
     flex: 1;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 2%;
+    background-color: #BF0811;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 2px 5px 39px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 5px 39px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 5px 39px -9px rgba(0,0,0,0.75);
 `;
 
 export const BodyContainerLogin = styled.div`
@@ -65,6 +73,8 @@ export const InputLogin = styled.input`
     border: 0px;
     color: rgb(80, 80, 80);
     width: 100%;
+    font-size: large;
+
     :focus{
         outline: none;
     }
@@ -72,12 +82,16 @@ export const InputLogin = styled.input`
 
 export const TitleLogin = styled.h2`
     font-weight: bold;
-    color: black;
+    color: white;
+    font-size: 30px;
 `;
 
 export const ButtonLogin = styled.button`
     background-color: #BF0811;
     color: white;
+    font-size: 18px;
+    font-weight: bold;
+
 `;
 
 export const ButtonEye = styled.button`

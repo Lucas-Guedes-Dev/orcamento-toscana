@@ -33,7 +33,7 @@ export default function Sidebar(props: SidebarProps){
     return(
         <SidebarContainer close={close}>
             <HeaderSidebar>
-                <LogoContainer style={{display: close? 'none' : 'flex' }} close={close}>
+                <LogoContainer style={{flex: close? '0' : '3' }} close={close}>
                     {close? 
                         ('')
                         :
@@ -50,7 +50,7 @@ export default function Sidebar(props: SidebarProps){
             </HeaderSidebar>
             <BodySidebar>
                 <ButtonSideBar 
-                    style={{backgroundColor: props.page == 'home'? 'rgba(255, 255, 255, 0.256)' : 'transparent'}}
+                    style={{borderBottom: props.page == 'home'? '3px solid rgb(255, 255, 255)' : 'transparent'}}
                     onClick={()=>navigate('/home', { state: { close: close} })}
                 >
                     <Home style={styleIcons} size={30}/>
@@ -63,7 +63,7 @@ export default function Sidebar(props: SidebarProps){
                     }
                 </ButtonSideBar>
                 <ButtonSideBar 
-                    style={{backgroundColor: props.page == 'orcamentos'? 'rgba(255, 255, 255, 0.256)' : 'transparent'}}
+                    style={{borderBottom: props.page == 'orcamentos'? '3px solid rgb(255, 255, 255)' : 'transparent'}}
                     onClick={()=>navigate('/orcamentos', { state: { close: close} })}
                 >
                     <DollarSign style={styleIcons} size={30}/>
@@ -76,7 +76,7 @@ export default function Sidebar(props: SidebarProps){
                     }
                 </ButtonSideBar>
                 <ButtonSideBar 
-                    style={{backgroundColor: props.page == 'register'? 'rgba(255, 255, 255, 0.256)' : 'transparent'}}
+                    style={{borderBottom: props.page == 'register'? '3px solid rgb(255, 255, 255)' : 'transparent'}}
                     onClick={()=>navigate('/register', { state: { close: close} })}
                 >
                     <PlusCircle style={styleIcons} size={30}/>

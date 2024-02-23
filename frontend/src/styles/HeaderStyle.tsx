@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
+    display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
-    display: flex;
     background-color: #3D3D3D;
     flex-direction: row;
     box-shadow: 0px 15px 25px -35px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 15px 25px -35px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 15px 25px -35px rgba(0,0,0,0.75);
-    
+    min-height: 80px;
 `;
 
 export const ContainerLeft = styled.div`

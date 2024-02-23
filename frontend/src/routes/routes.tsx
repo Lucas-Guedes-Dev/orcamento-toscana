@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import PrivateRoute from './private-routes';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
@@ -11,6 +11,7 @@ import RegisterDrinks from '../pages/RegisterDrinks';
 import Register from '../pages/Register';
 
 const App: React.FC = () => {
+  
   return (
     <Router>
       <Routes>

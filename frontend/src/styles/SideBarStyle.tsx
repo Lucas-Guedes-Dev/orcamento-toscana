@@ -41,8 +41,7 @@ export const HeaderSidebar = styled.div`
 `;
 
 export const LogoContainer = styled.div<SidebarProps>`
-    display: ${(close)=>(close? 'flex':'none')};
-    flex: ${(close)=>(close? 3:0)};
+    display:flex;
     justify-content: center;
     align-items: center;
     min-height: 80px;
