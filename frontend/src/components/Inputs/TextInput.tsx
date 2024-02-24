@@ -1,5 +1,6 @@
 import React from "react"
 import { InputText, ContainerInput, LabelInput } from "../../styles/InputStyles";
+
 interface TextInputProps {
     value: string;
     onChange: (text: string)=>void;
