@@ -2,6 +2,7 @@ import { PageContainer, MainContainer, BodyContainer } from '../styles/DeafaultS
 import Sidebar from '../components/SideBar';
 import Header from '../components/HeaderPage';
 import { useLocation } from 'react-router-dom';
+import { OrcamentosForm } from '../components/Forms/OrcamentosForm';
 
 export default function Orcamentos(){
     const { state } = useLocation();
@@ -12,7 +13,7 @@ export default function Orcamentos(){
             <MainContainer>
                 <Header/>
                 <BodyContainer>
-
+                    <OrcamentosForm/>
                 </BodyContainer>
             </MainContainer>
         </PageContainer>

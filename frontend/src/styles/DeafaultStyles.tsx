@@ -34,6 +34,7 @@ export const MainContainer = styled.div`
     margin: 0px;
     position: relative;
     flex-direction: column;
+    z-index: 0;
 `;
 
 export const BodyContainer = styled.div`
@@ -42,6 +43,7 @@ export const BodyContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: rgb(245, 245, 245);
+    padding: 4%;
 `;
 
 export const FooterContainer = styled.div`

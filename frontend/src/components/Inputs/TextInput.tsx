@@ -18,7 +18,6 @@ export const TextInput: React.FC<TextInputProps> = (props)=>{
             <LabelInput>{props.text}</LabelInput>
             <InputText placeholder={props.placeHolder} value={props.value} onChange={(event)=>{onChangeText(event.target.value)}} />
         </ContainerInput>
-        
     );
 }
 
