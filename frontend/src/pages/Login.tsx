@@ -12,19 +12,20 @@ import {
     ContainerLogin, 
     FooterContainerLogin, 
     HeaderContainerLogin, 
-    InputLogin, 
-    TitleLogin 
+    InputLogin 
 } from "../styles/LoginStyle";
 import LogoToscana from '../components/Icons/LogoToscana';
 
 export default function Login(){
     const [ eyeOn, setEyeOn ] = useState(false);
+    const [password, setPassword] = useState<string>();
+    const [username, setUsername] = useState<string>();
 
     const navigate = useNavigate();
     
     const SendLogin = async () => {
         try{
-            const response = await postData('/login', {username: 'teste', senha: 'teste'});
+            const response = await postData('/login', {username: username, password: password});
             localStorage.setItem('logado', response.login);
             navigate('/home');
         }catch (error){
@@ -39,10 +40,10 @@ export default function Login(){
             </HeaderContainerLogin>
             <BodyContainerLogin>
                 <ContainerInputLogin>
-                    <InputLogin placeholder="Usuário"/>
+                    <InputLogin onChange={(event)=>{setUsername(event.target.value)}} placeholder="Usuário"/>
                 </ContainerInputLogin>
                 <ContainerInputLogin>
-                    <InputLogin placeholder="Senha" type={eyeOn ? "text" : "password"}/>
+                    <InputLogin onChange={(event)=>{setPassword(event.target.value)}} placeholder="Senha" type={eyeOn ? "text" : "password"}/>
                     <ButtonEye onClick={()=>{setEyeOn(!eyeOn)}}>
                         { eyeOn ? 
                             (

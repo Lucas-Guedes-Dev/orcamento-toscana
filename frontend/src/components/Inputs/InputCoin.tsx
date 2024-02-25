@@ -13,7 +13,10 @@ interface InputMaskProps {
 
 export const InputCoin: React.FC<InputMaskProps> = (props)=>{    
     const onChangeText = (value: any)=>{
-        props.onChange(value);
+        if (!value){
+            value = '0';
+        }
+        props.onChange(value);  
     };
 
     return( 
