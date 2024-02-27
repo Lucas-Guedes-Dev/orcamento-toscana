@@ -6,9 +6,11 @@ import { InputCoin } from "../Inputs/InputCoin";
 import { NumberInput } from "../Inputs/NumberInput";
 import { SelectType } from "../Inputs/SelectInputType";
 import { DateInput } from "../Inputs/DatePicker";
+import { OrcamentoFormType } from "../../types/orcamento_types";
 
 interface OrcamentoProps{
     fieldList?: Array<React.ReactElement>;
+    onPress: (event: OrcamentoFormType)=>void;
 }
 
 const selectSalaoOptions = [
@@ -60,8 +62,29 @@ export const OrcamentosForm: React.FC<OrcamentoProps> = (props)=>{
         let newQtdePessoa = Number(qtdePessoa);
 
         setValorTotal(newQtdePessoa*newValorPessoa);
+        
+        if (typeEventChoice === '1'){
+            setNome('');
+        }
 
-    }, [salao, som, qtdePessoa, valorPessoa])
+    }, [salao, som, qtdePessoa, valorPessoa, typeEventChoice])
+
+    const onPressButtonSend = () => {
+
+        const orcamentoObj : OrcamentoFormType = {
+            nome: nome,
+            noiva: noiva,
+            noivo: noivo, 
+            salao: salao,
+            data_evento: date,
+            som: som,
+            total: total,
+            valor_pessoa: valorPessoa,
+            quantidade_pessoa: qtdePessoa
+        }
+
+        props.onPress(orcamentoObj);
+    }
 
     return( 
         <ContainerForm>
@@ -96,7 +119,7 @@ export const OrcamentosForm: React.FC<OrcamentoProps> = (props)=>{
                 <SectionFooter>
                 </SectionFooter>
                 <SectionFooter>
-                    <ButtonBuild>Gerar</ButtonBuild>
+                    <ButtonBuild onClick={()=>{onPressButtonSend()}}>Gerar</ButtonBuild>
                 </SectionFooter>
             </FooterForm>
         </ContainerForm>

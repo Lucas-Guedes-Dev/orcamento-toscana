@@ -52,3 +52,25 @@ export const FooterContainer = styled.div`
     justify-content: center;
     align-items: center;
 `;
+
+export const customStyles = {
+    content: {
+        top: '50%',
+        left: '55%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        padding: '0px'
+    },
+};
+
+export const ContainerModal = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130vh;
+    height: 90vh;
+    background-color: rgb(245, 245, 245);
+`
+

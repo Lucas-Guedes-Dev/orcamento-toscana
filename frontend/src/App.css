@@ -57,4 +57,18 @@ body{
   display: flex;
   font-size: 14px;
   color: #3D3D3D;
+} 
+
+.ReactModal__Overlay  {
+  background-color: red;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
 }
