@@ -63,6 +63,8 @@ body{
   background-color: red;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 .ReactModal__Overlay--after-open{

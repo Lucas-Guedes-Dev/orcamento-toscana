@@ -1,21 +1,48 @@
-import { useState } from 'react';
-import { PageContainer, MainContainer, BodyContainer, customStyles, ContainerModal } from '../styles/DeafaultStyles';
+import { useEffect, useState } from 'react';
+import { 
+    PageContainer, 
+    TitleModal, 
+    MainContainer,
+    BodyContainer, 
+    customStyles, 
+    ContainerModal,
+    HeaderModal,
+    BodyModal,
+    FooterModal,
+    ColumnFooterModal,
+    BuildButton,
+} from '../styles/DeafaultStyles';
+import { Select } from '../components/Inputs/SelectInput';
 import Sidebar from '../components/SideBar';
 import Header from '../components/HeaderPage';
 import { useLocation } from 'react-router-dom';
 import { OrcamentosForm } from '../components/Forms/OrcamentosForm';
 import { OrcamentoFormType } from '../types/orcamento_types';
 import Modal from 'react-modal';
+import ReactPDF, { PDFViewer } from '@react-pdf/renderer';
+import { DocumentRender } from '../components/Documents/pdf-generetor';
+
+const fileTypes = [{
+    value: '1',
+    text: 'PDF',
+},{
+    value: '1',
+    text: 'PNG',
+},{
+    value: '1',
+    text: 'LINK',
+},
+]
 
 export default function Orcamentos(){
     const { state } = useLocation();
     const [openModal, setOpenModal] = useState(false);
     const isSidebarClosed = state ? state.close : true;
-
+    
     const onPressForm = (form_obj: OrcamentoFormType) =>{
         console.log(form_obj)
         setOpenModal(true);
-    }   
+    }  
 
     return( 
         <PageContainer>
@@ -30,7 +57,25 @@ export default function Orcamentos(){
                         contentLabel="Example Modal"
                         style={customStyles}
                     >
-                        <ContainerModal>Ola mundo</ContainerModal>
+                        <ContainerModal>
+                            <HeaderModal>
+                                <TitleModal>Visualizador de PDF</TitleModal>
+                            </HeaderModal>
+                            <BodyModal>
+                                <PDFViewer style={{width: '100%', height: '100%'}}>
+                                    <DocumentRender ola='ola' />
+                                </PDFViewer>
+                            </BodyModal>
+                            <FooterModal>
+                                <ColumnFooterModal>
+                                    <Select values={fileTypes} onChange={()=>{}}/>
+                                </ColumnFooterModal>
+                                <ColumnFooterModal></ColumnFooterModal>
+                                <ColumnFooterModal>
+                                    <BuildButton>Gerar</BuildButton>
+                                </ColumnFooterModal>
+                            </FooterModal>
+                        </ContainerModal>
                     </Modal>
                 </BodyContainer>
             </MainContainer>

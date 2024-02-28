@@ -61,7 +61,8 @@ export const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        padding: '0px'
+        padding: '0px',
+        borderRadius: '20px'
     },
 };
 
@@ -69,8 +70,98 @@ export const ContainerModal = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130vh;
+    width: 150vh;
     height: 90vh;
     background-color: rgb(245, 245, 245);
-`
+    overflow-y: scroll;
+    flex-direction: column;
+    border-radius: 20px;
+    &::-webkit-scrollbar-track {
+        border: 0px;
+        padding: 2px 0;
+        background-color: rgb(210, 210, 210);
+    }
 
+    &::-webkit-scrollbar {
+        width: 10px;
+    }   
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #3d3d3d;
+        border: 1px solid #000;
+    }
+`;
+
+export const HeaderModal = styled.div`
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+`;
+
+
+export const BodyModal = styled.div`
+    display: flex;
+    flex: 6;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+`;
+
+export const FooterModal = styled.div`
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+`;
+
+export const TitleModal = styled.h2`
+    margin-left: 2%;
+    font-weight: bold;
+`;
+
+export const ColumnFooterModal = styled.div`
+    display: flex;
+    flex : 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`;
+
+export const BuildButton = styled.button`
+    display: flex;
+    flex: 1;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding: 4%;
+    border-radius: 8px;
+    background-color: #BF0811;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 90%;
+
+    &:hover{
+        background-color: #e95158;
+    }
+
+    &:active{
+        background-color: #3d3d3d;
+        color: white;
+    }
+`;
