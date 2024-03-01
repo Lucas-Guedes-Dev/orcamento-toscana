@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { 
     PageContainer, 
     TitleModal, 
@@ -19,7 +19,7 @@ import { useLocation } from 'react-router-dom';
 import { OrcamentosForm } from '../components/Forms/OrcamentosForm';
 import { OrcamentoFormType } from '../types/orcamento_types';
 import Modal from 'react-modal';
-import ReactPDF, { PDFViewer } from '@react-pdf/renderer';
+import { PDFViewer } from '@react-pdf/renderer';
 import { DocumentRender } from '../components/Documents/pdf-generetor';
 
 const fileTypes = [{
@@ -37,7 +37,7 @@ const fileTypes = [{
 export default function Orcamentos(){
     const { state } = useLocation();
     const [openModal, setOpenModal] = useState(false);
-    const isSidebarClosed = state ? state.close : true;
+    const isSidebarClosed = state ? state.close : false;
     
     const onPressForm = (form_obj: OrcamentoFormType) =>{
         console.log(form_obj)

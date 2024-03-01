@@ -14,26 +14,14 @@ export default function Register(){
                 <Header/>
                 <BodyContainer>
                     <RowContainer>
-                        <CardCadastro>
-
-                        </CardCadastro>
-                        <CardCadastro>
-                            
-                        </CardCadastro>
-                        <CardCadastro>
-                            
-                        </CardCadastro>
+                        <CardCadastro page='/register-drinks' icon={<img src="./src/assets/icones/coquetel.png"/>} text='Drinks' />
+                        <CardCadastro page='/register-drinks' icon={<img src="./src/assets/icones/coquetel.png"/>} text='Drinks' />
+                        <CardCadastro page='/register-drinks' icon={<img src="./src/assets/icones/coquetel.png"/>} text='Drinks' />
                     </RowContainer>
                     <RowContainer>
-                        <CardCadastro>
-
-                        </CardCadastro>
-                        <CardCadastro>
-                            
-                        </CardCadastro>
-                        <CardCadastro>
-                            
-                        </CardCadastro>
+                        <CardCadastro page='/register-drinks' icon={<img src="./src/assets/icones/coquetel.png"/>} text='Drinks' />
+                        <CardCadastro page='/register-drinks' icon={<img src="./src/assets/icones/coquetel.png"/>} text='Drinks' />
+                        <CardCadastro page='/register-drinks' icon={<img src="./src/assets/icones/coquetel.png"/>} text='Drinks' />
                     </RowContainer>
                 </BodyContainer>
             </MainContainer>
