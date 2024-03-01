@@ -1,7 +1,8 @@
-import { PageContainer, MainContainer, BodyContainer } from '../styles/DeafaultStyles';
+import { PageContainer, MainContainer, BodyContainer, RowContainer } from '../styles/DeafaultStyles';
 import Sidebar from '../components/SideBar';
 import Header from '../components/HeaderPage';
 import { useLocation } from 'react-router-dom';
+import { CardCadastro } from '../components/Cards/card-cadastro';
 
 export default function Register(){
     const { state } = useLocation();
@@ -12,7 +13,28 @@ export default function Register(){
             <MainContainer>
                 <Header/>
                 <BodyContainer>
+                    <RowContainer>
+                        <CardCadastro>
 
+                        </CardCadastro>
+                        <CardCadastro>
+                            
+                        </CardCadastro>
+                        <CardCadastro>
+                            
+                        </CardCadastro>
+                    </RowContainer>
+                    <RowContainer>
+                        <CardCadastro>
+
+                        </CardCadastro>
+                        <CardCadastro>
+                            
+                        </CardCadastro>
+                        <CardCadastro>
+                            
+                        </CardCadastro>
+                    </RowContainer>
                 </BodyContainer>
             </MainContainer>
         </PageContainer>
