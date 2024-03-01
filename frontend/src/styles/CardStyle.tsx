@@ -13,9 +13,9 @@ export const ContainerCard = styled.div`
     flex-direction: column;
     height: 100%;
     width: 100%;
-    box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+    box-shadow: 6px 4px 21px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 4px 21px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 4px 21px -7px rgba(0,0,0,0.75);
     border-radius: 8px;
     background-color: white;
     border: 2px solid transparent;

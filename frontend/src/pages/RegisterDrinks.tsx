@@ -2,6 +2,7 @@ import { PageContainer, MainContainer, BodyContainer } from '../styles/DeafaultS
 import Sidebar from '../components/SideBar';
 import Header from '../components/HeaderPage';
 import { useLocation } from 'react-router-dom';
+import { Table } from '../components/Table/table-register';
 
 export default function Home(){
     const { state } = useLocation();
@@ -13,6 +14,7 @@ export default function Home(){
             <MainContainer>
                 <Header/>
                 <BodyContainer>
+                    <Table/> 
                 </BodyContainer>
             </MainContainer>
         </PageContainer>

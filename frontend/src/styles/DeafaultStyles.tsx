@@ -151,6 +151,8 @@ export const ColumnFooterModal = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 `;
 
 export const BuildButton = styled.button`
