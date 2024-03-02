@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import PrivateRoute from './private-routes';
 import Login from '../pages/Login';
 import Orcamentos from '../pages/Orcamentos';
-import RegisterEmploye from '../pages/RegisterEmploye';
-import RegisterMenu from '../pages/RegisterMenu';
-import RegisterEvents from '../pages/RegisterEvents';
-import RegisterDrinks from '../pages/RegisterDrinks';
+import TableEmploye from '../pages/Employe/TableEmploye';
+import TableMenu from '../pages/Menu/TableMenu';
+import TableEvents from '../pages/Events/TableEvents';
+import TableDrinks from '../pages/Drinks/TableDrinks';
 import Register from '../pages/Register';
 
 const App: React.FC = () => {
@@ -17,10 +17,10 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<PrivateRoute />} >
           <Route path='/orcamentos' element={<Orcamentos/>}/>
-          <Route path='/register-employe' element={<RegisterEmploye/>}/>
-          <Route path='/register-menu' element={<RegisterMenu/>}/>
-          <Route path='/register-events' element={<RegisterEvents/>}/>
-          <Route path='/register-drinks' element={<RegisterDrinks/>}/>
+          <Route path='/register-employe' element={<TableEmploye/>}/>
+          <Route path='/register-menu' element={<TableMenu/>}/>
+          <Route path='/register-events' element={<TableEvents/>}/>
+          <Route path='/register-drinks' element={<TableDrinks/>}/>
           <Route path='/register' element={<Register/>}/>
         </Route>
       </Routes>

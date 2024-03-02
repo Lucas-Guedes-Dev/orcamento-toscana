@@ -6,7 +6,7 @@ import { InputCoin } from "../Inputs/InputCoin";
 import { NumberInput } from "../Inputs/NumberInput";
 import { SelectType } from "../Inputs/SelectInputType";
 import { DateInput } from "../Inputs/DatePicker";
-import { OrcamentoFormType } from "../../types/orcamento_types";
+import { OrcamentoFormType } from "../../types/OrcamentoTypes";
 
 interface OrcamentoProps{
     fieldList?: Array<React.ReactElement>;

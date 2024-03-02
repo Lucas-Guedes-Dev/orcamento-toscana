@@ -144,3 +144,16 @@ export const BuildButton = styled.button`
         color: white;
     }
 `;
+
+export const ButtonTable = styled.button`
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #3D3D3D;
+
+    &:hover{
+        color: #BF0811;
+    }
+`;

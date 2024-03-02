@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronsLeft, ChevronsRight, DollarSign, PlusCircle} from 'react-feather';
+import { ChevronsLeft, ChevronsRight, DollarSign, PlusCircle, Plus} from 'react-feather';
 import { 
     ChevronContainer,
     BodySidebar,
@@ -48,7 +48,7 @@ export default function Sidebar(props: SidebarProps){
             </HeaderSidebar>
             <BodySidebar>
                 <ButtonSideBar 
-                    style={{borderBottom: props.page == 'orcamentos'? '3px solid rgb(255, 255, 255)' : 'transparent'}}
+                    style={{borderBottom: props.page == 'orcamentos'? '3px solid rgb(255, 255, 255)' : '3px solid transparent'}}
                     onClick={()=>navigate('/orcamentos', { state: { close: close} })}
                 >
                     <DollarSign style={styleIcons} size={30}/>
@@ -61,7 +61,7 @@ export default function Sidebar(props: SidebarProps){
                     }
                 </ButtonSideBar>
                 <ButtonSideBar 
-                    style={{borderBottom: props.page == 'register'? '3px solid rgb(255, 255, 255)' : 'transparent'}}
+                    style={{borderBottom: props.page == 'register'? '3px solid rgb(255, 255, 255)' : '3px solid transparent'}}
                     onClick={()=>navigate('/register', { state: { close: close} })}
                 >
                     <PlusCircle style={styleIcons} size={30}/>

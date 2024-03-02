@@ -1,10 +1,10 @@
-import { PageContainer, MainContainer, BodyContainer } from '../styles/DeafaultStyles';
-import Sidebar from '../components/SideBar';
-import Header from '../components/HeaderPage';
+import { PageContainer, MainContainer, BodyContainer } from '../../styles/DeafaultStyles';
+import Sidebar from '../../components/SideBar';
+import Header from '../../components/HeaderPage';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
-export default function Home(){
+export default function TableEvents(){
     const { state } = useLocation();
     const isSidebarClosed = state ? state.close : false;
 

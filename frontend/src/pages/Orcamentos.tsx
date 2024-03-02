@@ -17,7 +17,7 @@ import Sidebar from '../components/SideBar';
 import Header from '../components/HeaderPage';
 import { useLocation } from 'react-router-dom';
 import { OrcamentosForm } from '../components/Forms/OrcamentosForm';
-import { OrcamentoFormType } from '../types/orcamento_types';
+import { OrcamentoFormType } from '../types/OrcamentoTypes';
 import Modal from 'react-modal';
 import { PDFViewer } from '@react-pdf/renderer';
 import { DocumentRender } from '../components/Documents/pdf-generetor';
