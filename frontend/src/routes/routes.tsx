@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import PrivateRoute from './private-routes';
 import Login from '../pages/Login';
-import Home from '../pages/Home';
 import Orcamentos from '../pages/Orcamentos';
 import RegisterEmploye from '../pages/RegisterEmploye';
 import RegisterMenu from '../pages/RegisterMenu';
@@ -17,7 +16,6 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<PrivateRoute />} >
-          <Route path='/home' element={<Home/>}/>
           <Route path='/orcamentos' element={<Orcamentos/>}/>
           <Route path='/register-employe' element={<RegisterEmploye/>}/>
           <Route path='/register-menu' element={<RegisterMenu/>}/>

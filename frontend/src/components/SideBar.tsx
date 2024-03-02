@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronsLeft, ChevronsRight, ChevronsDown, DollarSign, Home, PlusCircle} from 'react-feather';
+import { ChevronsLeft, ChevronsRight, DollarSign, PlusCircle} from 'react-feather';
 import { 
     ChevronContainer,
     BodySidebar,
@@ -7,7 +7,6 @@ import {
     HeaderSidebar, 
     LogoContainer, 
     SidebarContainer,
-    TitleSideBar,
     ButtonSideBar,
     TextButtonSidebar
 } from '../styles/SideBarStyle';
@@ -49,19 +48,6 @@ export default function Sidebar(props: SidebarProps){
                 </ChevronContainer>
             </HeaderSidebar>
             <BodySidebar>
-                <ButtonSideBar 
-                    style={{borderBottom: props.page == 'home'? '3px solid rgb(255, 255, 255)' : 'transparent'}}
-                    onClick={()=>navigate('/home', { state: { close: close} })}
-                >
-                    <Home style={styleIcons} size={30}/>
-                    {
-                        close ? (
-                            ''
-                        ):(
-                            <TextButtonSidebar>Home</TextButtonSidebar>
-                        )
-                    }
-                </ButtonSideBar>
                 <ButtonSideBar 
                     style={{borderBottom: props.page == 'orcamentos'? '3px solid rgb(255, 255, 255)' : 'transparent'}}
                     onClick={()=>navigate('/orcamentos', { state: { close: close} })}

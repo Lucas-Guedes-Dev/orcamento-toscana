@@ -84,25 +84,8 @@ export const ContainerModal = styled.div`
     width: 150vh;
     height: 90vh;
     background-color: rgb(245, 245, 245);
-    overflow-y: scroll;
     flex-direction: column;
     border-radius: 20px;
-    &::-webkit-scrollbar-track {
-        border: 0px;
-        padding: 2px 0;
-        background-color: rgb(210, 210, 210);
-    }
-
-    &::-webkit-scrollbar {
-        width: 10px;
-    }   
-
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-        background-color: #3d3d3d;
-        border: 1px solid #000;
-    }
 `;
 
 export const HeaderModal = styled.div`
@@ -142,6 +125,7 @@ export const FooterModal = styled.div`
 export const TitleModal = styled.h2`
     margin-left: 2%;
     font-weight: bold;
+    color: black;
 `;
 
 export const ColumnFooterModal = styled.div`
@@ -151,8 +135,6 @@ export const ColumnFooterModal = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 2%;
-    padding-bottom: 2%;
 `;
 
 export const BuildButton = styled.button`

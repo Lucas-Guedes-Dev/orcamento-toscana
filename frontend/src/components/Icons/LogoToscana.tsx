@@ -1,4 +1,4 @@
-function LogoToscana(props) {
+function LogoToscana(props: any) {
   return (
     <svg
       id="Camada_2"

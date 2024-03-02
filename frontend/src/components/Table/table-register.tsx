@@ -5,8 +5,8 @@ interface TableProps {
 
 }
 
-export const Table: React.FC<TableProps> = (props)=>{    
-
+export const Table: React.FC<TableProps> = (props: any)=>{    
+    console.log(props)
     return( 
         <ContainerForm>
             

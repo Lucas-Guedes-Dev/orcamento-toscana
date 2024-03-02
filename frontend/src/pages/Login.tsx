@@ -27,7 +27,7 @@ export default function Login(){
         try{
             const response = await postData('/login', {username: username, password: password});
             localStorage.setItem('logado', response.login);
-            navigate('/home');
+            navigate('/orcamentos');
         }catch (error){
             // console.log(error)
         }

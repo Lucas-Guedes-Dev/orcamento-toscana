@@ -4,7 +4,9 @@ import Header from '../components/HeaderPage';
 import { useLocation } from 'react-router-dom';
 import { CardCadastro } from '../components/Cards/card-cadastro';
 import Coquetel from '../components/Icons/Coquetel';
-import Dj from '../components/Icons/Dj';
+import Carteira from '../components/Icons/Carteira';
+import Cardapio from '../components/Icons/Cardapio';
+import Calendario from '../components/Icons/Calendario';
 
 export default function Register(){
     const { state } = useLocation();
@@ -16,14 +18,12 @@ export default function Register(){
                 <Header/>
                 <BodyContainer>
                     <RowContainer>
-                        <CardCadastro page='/register-drinks' icon={<Coquetel width={60}/>} text='Drinks' />
-                        <CardCadastro page='/register-drinks' icon={<Dj width={20}/>} text='Drinks' />
-                        <CardCadastro page='/register-drinks' icon={<Coquetel width={5}/>} text='Drinks' />
+                        <CardCadastro page='/register-drinks' icon={<Carteira width={60}/>} text='Funcionarios' />
+                        <CardCadastro page='/register-drinks' icon={<Cardapio width={60}/>} text='Cardápios' />
                     </RowContainer>
                     <RowContainer>
-                        <CardCadastro page='/register-drinks' icon={<Coquetel width={5}/>} text='Drinks' />
-                        <CardCadastro page='/register-drinks' icon={<Coquetel width={5}/>} text='Drinks' />
-                        <CardCadastro page='/register-drinks' icon={<Coquetel width={5}/>} text='Drinks' />
+                        <CardCadastro page='/register-drinks' icon={<Calendario width={60}/>} text='Eventos' />
+                        <CardCadastro page='/register-drinks' icon={<Coquetel width={60}/>} text='Drinks' />
                     </RowContainer>
                 </BodyContainer>
             </MainContainer>
