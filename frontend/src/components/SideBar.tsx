@@ -25,7 +25,6 @@ const styleIcons = {
 
 export default function Sidebar(props: SidebarProps){
     const [close, setClose] = useState(props.close);
-    // const [openRegister, setOpenRegister] = useState(false);
 
     const navigate = useNavigate();
 

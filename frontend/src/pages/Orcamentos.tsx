@@ -37,10 +37,12 @@ const fileTypes = [{
 export default function Orcamentos(){
     const { state } = useLocation();
     const [openModal, setOpenModal] = useState(false);
+    const [formObj, setFormObj] = useState<OrcamentoFormType>();
     const isSidebarClosed = state ? state.close : false;
     
     const onPressForm = (form_obj: OrcamentoFormType) =>{
         console.log(form_obj)
+        setFormObj(form_obj);
         setOpenModal(true);
     }  
 
@@ -63,7 +65,7 @@ export default function Orcamentos(){
                             </HeaderModal>
                             <BodyModal>
                                 <PDFViewer style={{width: '100%', height: '100%'}}>
-                                    <DocumentRender ola='ola' />
+                                    <DocumentRender ola={formObj?.nome} />
                                 </PDFViewer>
                             </BodyModal>
                             <FooterModal>

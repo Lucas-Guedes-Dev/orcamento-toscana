@@ -8,23 +8,7 @@ export const PageContainer = styled.div`
     flex: 1;
     flex-direction: row;
 
-    ::-webkit-scrollbar {
-        width: 15px;
-        height: 15px;
-    }
-   
-    ::-webkit-scrollbar-track {
-        background-color: rgba(255, 255, 255, 0.256); 
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 255, 255, 0.256);
-        border-radius: 8px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: #555;
-    }
+    overflow: hidden;
 `;
 
 export const MainContainer = styled.div`

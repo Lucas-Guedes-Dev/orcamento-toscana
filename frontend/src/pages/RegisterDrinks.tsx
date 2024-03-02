@@ -14,7 +14,7 @@ export default function Home(){
             <MainContainer>
                 <Header/>
                 <BodyContainer>
-                    <Table/> 
+                    <Table linhas={[{ola: 'teste', ola2: 'teste',ola3: 'teste', ola4: <button>ola</button>}]} colunas={['Coluna1', 'Coluna2', 'Coluna3', <button>Add novo</button>]}/> 
                 </BodyContainer>
             </MainContainer>
         </PageContainer>

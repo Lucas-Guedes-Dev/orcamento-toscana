@@ -9,11 +9,10 @@ export const ContainerForm = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     box-shadow: 10px 9px 30px -4px rgba(0,0,0,0.35);
     -webkit-box-shadow: 10px 9px 30px -4px rgba(0,0,0,0.35);
     -moz-box-shadow: 10px 9px 30px -4px rgba(0,0,0,0.35);
-   
 `;
 
 export const RowContainer = styled.div`

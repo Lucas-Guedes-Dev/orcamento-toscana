@@ -9,7 +9,7 @@ export default function Home(){
     
     return( 
         <PageContainer>
-            <Sidebar close={isSidebarClosed} page='home'/>
+            <Sidebar close={isSidebarClosed} page='register'/>
             <MainContainer>
                 <Header/>
                 <BodyContainer>

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 });
 
 interface PropsPage{
-    ola: string;
+    ola?: string;
 }
 
 export const DocumentRender: React.FC<PropsPage> = (props) => (

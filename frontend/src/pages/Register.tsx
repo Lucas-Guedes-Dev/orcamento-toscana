@@ -18,12 +18,12 @@ export default function Register(){
                 <Header/>
                 <BodyContainer>
                     <RowContainer>
-                        <CardCadastro page='/register-drinks' icon={<Carteira width={60}/>} text='Funcionarios' />
-                        <CardCadastro page='/register-drinks' icon={<Cardapio width={60}/>} text='Cardápios' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-drinks' icon={<Carteira width={60}/>} text='Funcionarios' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-drinks' icon={<Cardapio width={60}/>} text='Cardápios' />
                     </RowContainer>
                     <RowContainer>
-                        <CardCadastro page='/register-drinks' icon={<Calendario width={60}/>} text='Eventos' />
-                        <CardCadastro page='/register-drinks' icon={<Coquetel width={60}/>} text='Drinks' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-drinks' icon={<Calendario width={60}/>} text='Eventos' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-drinks' icon={<Coquetel width={60}/>} text='Drinks' />
                     </RowContainer>
                 </BodyContainer>
             </MainContainer>
