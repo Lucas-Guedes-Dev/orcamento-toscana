@@ -11,6 +11,7 @@ import Calendario from '../components/Icons/Calendario';
 export default function Register(){
     const { state } = useLocation();
     const isSidebarClosed = state ? state.close : false;
+    
     return( 
         <PageContainer>
             <Sidebar close={isSidebarClosed} page='register'/>
@@ -18,12 +19,12 @@ export default function Register(){
                 <Header/>
                 <BodyContainer>
                     <RowContainer>
-                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-drinks' icon={<Carteira width={60}/>} text='Funcionarios' />
-                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-menu' icon={<Cardapio width={60}/>} text='Cardápios' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/registers-drinks' icon={<Carteira width={60}/>} text='Funcionarios' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/registers-menu' icon={<Cardapio width={60}/>} text='Cardápios' />
                     </RowContainer>
                     <RowContainer>
-                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-drinks' icon={<Calendario width={60}/>} text='Eventos' />
-                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/register-drinks' icon={<Coquetel width={60}/>} text='Drinks' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/registers-drinks' icon={<Calendario width={60}/>} text='Eventos' />
+                        <CardCadastro optionsPage={{state: {close: isSidebarClosed}}} page='/registers-drinks' icon={<Coquetel width={60}/>} text='Drinks' />
                     </RowContainer>
                 </BodyContainer>
             </MainContainer>

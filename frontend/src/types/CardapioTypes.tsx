@@ -1,3 +1,3 @@
-export interface CadapFormType {
+export interface MenuFormType {
 
 }

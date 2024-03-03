@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { Table } from '../../components/Table/table-register';
 import { PlusCircle, PenTool} from 'react-feather';
 
-export default function TableEmploye(){
+export default function TableDrinks(){
     const { state } = useLocation();
     const isSidebarClosed = state ? state.close : false;
   

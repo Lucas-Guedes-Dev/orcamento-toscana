@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react"
 import { ContainerForm, RowContainer, HeaderForm, TitleForm, FooterForm, ButtonBuild, SectionFooter} from "../../styles/FormsStyles";
 
-import { CadapFormType } from "../../types/CardapioTypes";
+import { MenuFormType } from "../../types/CardapioTypes";
 
 interface CardapioProps{
     fieldList?: Array<React.ReactElement>;
-    onPress: (event: CadapFormType)=>void;
+    onPress: (event: MenuFormType)=>void;
 }
 
-export const CardapioForm: React.FC<CardapioProps> = (props)=>{    
+export const MenuForm: React.FC<CardapioProps> = (props)=>{    
+
+    const onPressRegister = () => {
+
+    }
+
     return( 
         <ContainerForm>
             <HeaderForm>
@@ -18,6 +23,11 @@ export const CardapioForm: React.FC<CardapioProps> = (props)=>{
                 
             </SectionFooter>
             <FooterForm>
+                <SectionFooter></SectionFooter>
+                <SectionFooter></SectionFooter>
+                <SectionFooter>
+                    <ButtonBuild onClick={onPressRegister}>Cadastrar</ButtonBuild>
+                </SectionFooter>
             </FooterForm>
         </ContainerForm>
     );
