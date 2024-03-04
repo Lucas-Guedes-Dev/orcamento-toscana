@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { EyeOff, Eye } from 'react-feather';
 import { postData } from '../serivce/api';
 import { useNavigate } from 'react-router-dom'; // Importe useHistory
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { 
     ContainerInputLogin, 
@@ -25,9 +27,19 @@ export default function Login(){
     
     const SendLogin = async () => {
         try{
-            const response = await postData('/login', {username: username, password: password});
-            localStorage.setItem('logado', response.login);
-            navigate('/orcamentos');
+            await postData('/login', {username: username, password: password})
+            .then((results)=>{
+
+                    localStorage.setItem('logado', results.login);
+                    navigate('/orcamentos');   
+            })
+            .catch((error)=>{
+                console.log(error);
+                toast.error("Não foi possivel realizar o login!", {
+                    position: 'top-right',
+                  });
+            }) ;
+           
         }catch (error){
             // console.log(error)
         }
@@ -60,6 +72,7 @@ export default function Login(){
                     Enviar
                 </ButtonLogin>
             </FooterContainerLogin>
+            <ToastContainer/>
         </ContainerLogin>
     );
 }
