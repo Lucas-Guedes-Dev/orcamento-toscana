@@ -9,7 +9,6 @@ class Login(View):
         if request.method == "POST":
             username = request.json.get('username') 
             password = request.json.get('password')
-            print(username, password)
             if username == 'usuario' and password == 'senha':
                 access_token = create_access_token(identity=username)
                 return jsonify(access_token=access_token), 200
